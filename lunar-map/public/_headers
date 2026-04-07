@@ -1,0 +1,6 @@
+/terrain/*
+  Content-Type: application/octet-stream
+  Access-Control-Allow-Origin: *
+
+/tiles/*
+  Access-Control-Allow-Origin: *
