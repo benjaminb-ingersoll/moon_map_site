@@ -1,0 +1,21 @@
+{
+  "tilejson": "2.1.0",
+  "format": "heightmap-1.0",
+  "version": "1.0.0",
+  "scheme": "tms",
+  "tiles": [
+    "{z}/{x}/{y}.terrain"
+  ],
+  "minzoom": 0,
+  "maxzoom": 5,
+  "bounds": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "projection": "EPSG:4326",
+  "heightOffset": -33560.65234375,
+  "heightScale": 2.2324678315836053,
+  "tileSize": 65
+}

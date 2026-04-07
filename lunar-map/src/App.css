@@ -1,0 +1,316 @@
+.app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ===========================
+   Sidebar
+   =========================== */
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  z-index: 100;
+  background: rgba(10, 10, 30, 0.92);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.sidebar-title h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.sidebar-subtitle {
+  font-size: 10px;
+  color: #888;
+  margin-top: 2px;
+  display: block;
+}
+
+.sidebar-close {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.sidebar-close:hover {
+  color: #fff;
+}
+
+/* Collapsed state: floating buttons */
+.sidebar-collapsed-btns {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-toggle-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: rgba(10, 10, 30, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: #ccc;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-toggle-btn:hover {
+  color: #fff;
+  background: rgba(30, 30, 60, 0.9);
+}
+
+/* ===========================
+   Sidebar sections
+   =========================== */
+.sidebar-section {
+  padding: 12px 16px;
+  flex-shrink: 0;
+}
+
+.sidebar-section-legend {
+  flex-shrink: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #777;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 0 16px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Nearside button
+   =========================== */
+.nearside-btn {
+  width: 100%;
+  padding: 7px 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nearside-btn:hover {
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+}
+
+/* ===========================
+   Layer checkboxes & era dots
+   =========================== */
+.era-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.layer-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 3px 0;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.layer-checkbox:hover {
+  color: #fff;
+}
+
+.layer-checkbox input[type="checkbox"] {
+  accent-color: #74c0fc;
+  margin: 0;
+}
+
+.era-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Linear feature legend
+   =========================== */
+.line-legend {
+  margin: 6px 0 0 22px;
+}
+
+.line-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #999;
+  padding: 1px 0;
+}
+
+.line-swatch {
+  display: inline-block;
+  width: 16px;
+  height: 3px;
+  border-radius: 1px;
+}
+
+/* ===========================
+   Legend (collapsible)
+   =========================== */
+.legend-toggle {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  text-align: left;
+}
+
+.legend-toggle:hover {
+  color: #fff;
+}
+
+.legend-arrow {
+  font-size: 11px;
+  color: #666;
+  width: 12px;
+  flex-shrink: 0;
+}
+
+.legend-count {
+  font-size: 10px;
+  color: #666;
+  margin-left: auto;
+}
+
+.legend-body {
+  margin-top: 8px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  padding-right: 4px;
+}
+
+.legend-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.legend-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+  font-size: 12px;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.legend-label {
+  color: #bbb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===========================
+   Coordinate display
+   =========================== */
+.coord-display {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+  background: rgba(10, 10, 30, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 12px;
+  padding: 5px 10px;
+  color: #aaa;
+}
+
+/* ===========================
+   Cesium overrides
+   =========================== */
+.cesium-viewer .cesium-widget-credits {
+  display: none !important;
+}
+
+.cesium-infoBox {
+  background: rgba(10, 10, 30, 0.95) !important;
+  color: #ddd !important;
+}
+
+.cesium-infoBox-title {
+  color: #fff !important;
+}
